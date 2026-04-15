@@ -3,6 +3,7 @@ import { AudioToggle } from "@/components/AudioToggle";
 import { LastBloodBadge } from "@/components/LastBloodBadge";
 import { PlayoffModeBanner } from "@/components/PlayoffModeBanner";
 import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/assets";
 import { formatDisplayDate, formatTeamShortName, teamsById } from "@/lib/rivalry-data";
 import { LatestMeeting, TeamId } from "@/types/rivalry";
 
@@ -47,14 +48,14 @@ export function Hero({ lastBloodTeamId, latestMeeting, rivalryHook, playoffMode,
               <div className="absolute inset-x-8 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-ember/70 via-white/30 to-gold/70" />
               <div className="grid grid-cols-[1fr_120px_1fr] items-center gap-6">
                 <div className="relative h-44">
-                  <Image src={flyers.logo} alt={flyers.name} fill className="object-contain object-left drop-shadow-[0_0_30px_rgba(243,107,33,0.25)]" sizes="240px" />
+                  <Image src={withBasePath(flyers.logo)} alt={flyers.name} fill className="object-contain object-left drop-shadow-[0_0_30px_rgba(243,107,33,0.25)]" sizes="240px" />
                 </div>
                 <div className="text-center">
                   <p className="font-display text-6xl text-bone">VS</p>
                   <p className="mt-2 text-xs uppercase tracking-[0.3em] text-slate-400">State line pressure</p>
                 </div>
                 <div className="relative h-44">
-                  <Image src={penguins.logo} alt={penguins.name} fill className="object-contain object-right drop-shadow-[0_0_30px_rgba(247,201,72,0.20)]" sizes="240px" />
+                  <Image src={withBasePath(penguins.logo)} alt={penguins.name} fill className="object-contain object-right drop-shadow-[0_0_30px_rgba(247,201,72,0.20)]" sizes="240px" />
                 </div>
               </div>
               <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5">

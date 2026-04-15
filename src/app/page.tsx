@@ -11,6 +11,7 @@ import { RivalrySnapshot } from "@/components/RivalrySnapshot";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TimelineStoryBlock } from "@/components/TimelineStoryBlock";
 import { rivalryData } from "@/data/mock-rivalry";
+import { withBasePath } from "@/lib/assets";
 import { formatTeamShortName } from "@/lib/rivalry-data";
 
 export default function HomePage() {
@@ -96,7 +97,7 @@ export default function HomePage() {
             {rivalryData.crossoverPlayers.map((player, index) => (
               <Reveal key={player.id} delay={index * 0.06} className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5">
                 <div className="relative h-56 overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-white/10 to-transparent">
-                  <Image src={player.headshot} alt={player.name} fill className="object-cover" sizes="280px" />
+                  <Image src={withBasePath(player.headshot)} alt={player.name} fill className="object-cover" sizes="280px" />
                 </div>
                 <p className="mt-5 text-xs uppercase tracking-[0.28em] text-steel">{formatTeamShortName(player.primaryTeamId)}</p>
                 <h3 className="mt-3 font-display text-3xl text-bone">{player.name}</h3>

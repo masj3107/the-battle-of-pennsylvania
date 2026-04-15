@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { DualTeamBadge } from "@/components/DualTeamBadge";
+import { withBasePath } from "@/lib/assets";
 import { formatTeamShortName } from "@/lib/rivalry-data";
 import { Player } from "@/types/rivalry";
 
@@ -14,7 +15,7 @@ export function PlayerRow({ player, rank }: PlayerRowProps) {
       <div className="text-center font-display text-2xl text-white/90">{rank}</div>
       <div className="flex items-center gap-3">
         <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/10 bg-black/30">
-          <Image src={player.headshot} alt={player.name} fill className="object-cover" sizes="44px" />
+          <Image src={withBasePath(player.headshot)} alt={player.name} fill className="object-cover" sizes="44px" />
         </div>
         <div>
           <div className="flex items-center gap-2">

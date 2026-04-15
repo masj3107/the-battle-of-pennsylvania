@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { withBasePath } from "@/lib/assets";
 
 type AudioToggleProps = {
   defaultEnabled?: boolean;
 };
 
-const AUDIO_SOURCE = "/audio/cinematic-western-placeholder.mp3";
+const AUDIO_SOURCE = withBasePath("/audio/cinematic-western-placeholder.mp3");
 
 export function AudioToggle({ defaultEnabled = false }: AudioToggleProps) {
   const [enabled, setEnabled] = useState(defaultEnabled);

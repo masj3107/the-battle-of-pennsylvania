@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/assets";
 import { Goalie } from "@/types/rivalry";
 import { formatTeamShortName } from "@/lib/rivalry-data";
 
@@ -15,7 +16,7 @@ export function GoalieStatsPanel({ goalies }: GoalieStatsPanelProps) {
           <div className="flex items-center gap-4">
             {goalie.headshot ? (
               <div className="relative h-16 w-16 overflow-hidden rounded-full border border-white/10 bg-black/30">
-                <Image src={goalie.headshot} alt={goalie.name} fill className="object-cover" sizes="64px" />
+                <Image src={withBasePath(goalie.headshot)} alt={goalie.name} fill className="object-cover" sizes="64px" />
               </div>
             ) : null}
             <div>
