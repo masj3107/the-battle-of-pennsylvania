@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="96" fill="#0B0D11"/>
+  <circle cx="256" cy="256" r="178" fill="#F7C948" fill-opacity="0.14" stroke="#F7C948" stroke-width="8"/>
+  <path d="M174 144h102c65 0 111 38 111 94 0 57-46 95-111 95h-57v63h-45V144Zm45 46v97h56c39 0 66-18 66-49 0-31-27-48-66-48h-56Z" fill="#F7C948"/>
+  <path d="M255 214h78v39h-78v-39Zm0 68h52v39h-52v-39Z" fill="#F5F1EA"/>
+  <text x="256" y="438" text-anchor="middle" fill="#F5F1EA" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">PITTSBURGH</text>
+</svg>

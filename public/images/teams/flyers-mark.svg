@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="96" fill="#0E1116"/>
+  <circle cx="256" cy="256" r="178" fill="#F36B21" fill-opacity="0.14" stroke="#F36B21" stroke-width="8"/>
+  <path d="M150 256c0-72 49-120 122-120 46 0 84 15 111 43l-39 39c-19-17-45-26-74-26-47 0-75 25-75 64 0 40 28 66 75 66 30 0 56-10 74-27l39 39c-27 29-65 44-111 44-73 0-122-48-122-122Z" fill="#F36B21"/>
+  <path d="M214 177h133l-24 44h-109v-44Zm0 114h95l-23 44h-72v-44Z" fill="#F5F1EA"/>
+  <text x="256" y="438" text-anchor="middle" fill="#F5F1EA" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">PHILADELPHIA</text>
+</svg>

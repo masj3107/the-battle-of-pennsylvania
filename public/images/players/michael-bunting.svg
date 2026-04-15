@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="960" viewBox="0 0 800 960" fill="none">
+  <rect width="800" height="960" fill="#111111"/>
+  <circle cx="400" cy="310" r="154" fill="#222831" stroke="#f7c948" stroke-width="8"/>
+  <path d="M190 880c22-172 119-258 210-258s188 86 210 258" fill="#20242c" stroke="#f7c948" stroke-width="8"/>
+  <circle cx="346" cy="286" r="12" fill="#f7c948" fill-opacity="0.9"/>
+  <circle cx="454" cy="286" r="12" fill="#f7c948" fill-opacity="0.9"/>
+  <path d="M340 376c28 20 92 20 120 0" stroke="#f7c948" stroke-width="10" stroke-linecap="round"/>
+  <text x="400" y="116" text-anchor="middle" fill="#F5F1EA" font-size="42" font-family="Arial, sans-serif" letter-spacing="7">MICHAEL BUNTING</text>
+  <text x="400" y="548" text-anchor="middle" fill="#f7c948" font-size="118" font-family="Arial, sans-serif" font-weight="700">MB</text>
+  <text x="400" y="916" text-anchor="middle" fill="#9CA3AF" font-size="24" font-family="Arial, sans-serif" letter-spacing="5">EDITORIAL PLACEHOLDER PORTRAIT</text>
+</svg>

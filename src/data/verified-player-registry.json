@@ -1,0 +1,105 @@
+{
+  "skaters": [
+    {
+      "name": "Mario Lemieux",
+      "nhlPlayerId": 8448782,
+      "verifiedSeason": 20052006,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Mark Recchi",
+      "nhlPlayerId": 8450725,
+      "verifiedSeason": 20102011,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Jaromir Jagr",
+      "nhlPlayerId": 8448208,
+      "verifiedSeason": 20172018,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Brian Propp",
+      "nhlPlayerId": 8450595,
+      "verifiedSeason": 19931994,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Bill Barber",
+      "nhlPlayerId": 8445252,
+      "verifiedSeason": 19831984,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Rick Tocchet",
+      "nhlPlayerId": 8451925,
+      "verifiedSeason": 20012002,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "John LeClair",
+      "nhlPlayerId": 8448622,
+      "verifiedSeason": 20062007,
+      "activeStatus": "inactive",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Claude Giroux",
+      "nhlPlayerId": 8473512,
+      "currentClubAbbrev": "OTT",
+      "verifiedSeason": 20252026,
+      "activeStatus": "active-nhl",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Morgan Frost",
+      "nhlPlayerId": 8480028,
+      "currentClubAbbrev": "CGY",
+      "verifiedSeason": 20252026,
+      "activeStatus": "active-nhl",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Michael Bunting",
+      "nhlPlayerId": 8478047,
+      "currentClubAbbrev": "DAL",
+      "verifiedSeason": 20252026,
+      "activeStatus": "active-nhl",
+      "currentRosterStatus": "not-on-current-roster"
+    },
+    {
+      "name": "Joel Farabee",
+      "nhlPlayerId": 8480797,
+      "currentClubAbbrev": "CGY",
+      "verifiedSeason": 20252026,
+      "activeStatus": "active-nhl",
+      "currentRosterStatus": "not-on-current-roster"
+    }
+  ],
+  "goalies": [
+    {
+      "name": "Ron Hextall",
+      "nhlPlayerId": 8447775,
+      "verifiedSeason": 19981999,
+      "activeStatus": "inactive"
+    },
+    {
+      "name": "Alex Nedeljkovic",
+      "nhlPlayerId": 8477968,
+      "verifiedSeason": 20252026,
+      "activeStatus": "active-nhl"
+    },
+    {
+      "name": "Marc-Andre Fleury",
+      "nhlPlayerId": 8470594,
+      "verifiedSeason": 20242025,
+      "activeStatus": "active-nhl"
+    }
+  ]
+}
