@@ -103,6 +103,20 @@ export type OddFact = {
   editorialNote?: string;
 };
 
+export type FightClip = {
+  id: string;
+  title: string;
+  date: string;
+  eraLabel: string;
+  summary: string;
+  teamLean: TeamId | "neutral";
+  combatants: string[];
+  embedUrl: string;
+  watchUrl: string;
+  sourceLabel: string;
+  sourceDate: string;
+};
+
 export type TimelineEvent = {
   id: string;
   year: string;
@@ -131,6 +145,7 @@ export type RivalryData = {
   allTimePlayerLeaders: Player[];
   goalieLeaders: Goalie[];
   crossoverPlayers: Player[];
+  fightClips: FightClip[];
   oddFacts: OddFact[];
   timeline: TimelineEvent[];
 };

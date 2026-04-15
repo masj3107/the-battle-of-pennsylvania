@@ -770,6 +770,64 @@
       "playoffPointsVsRival": 5
     }
   ],
+  "fightClips": [
+    {
+      "id": "fight-2012-04-01-brawl",
+      "title": "The April 1 line brawl",
+      "date": "2012-04-01",
+      "eraLabel": "Regular-season detonation",
+      "summary": "With just over a minute left, the game dissolved into a full-state argument: Craig Adams with Scott Hartnell, Arron Asham hunting Brayden Schenn, and everyone else arriving late with bad intentions.",
+      "teamLean": "neutral",
+      "combatants": [
+        "Craig Adams",
+        "Scott Hartnell",
+        "Arron Asham",
+        "Brayden Schenn",
+        "Pavel Kubina"
+      ],
+      "embedUrl": "https://www.youtube-nocookie.com/embed/tsQv3wOmuJ0",
+      "watchUrl": "https://www.youtube.com/watch?v=tsQv3wOmuJ0",
+      "sourceLabel": "YouTube clip",
+      "sourceDate": "2012-04-01"
+    },
+    {
+      "id": "fight-2012-04-15-game-3",
+      "title": "Game 3 becomes public disorder",
+      "date": "2012-04-15",
+      "eraLabel": "Playoff riot energy",
+      "summary": "The 2012 playoff series never really held shape, but Game 3 was the purest example: scrums after whistles, fresh misconducts, and both benches acting like de-escalation was for another rivalry.",
+      "teamLean": "neutral",
+      "combatants": [
+        "Max Talbot",
+        "Deryk Engelland",
+        "Scott Hartnell",
+        "Craig Adams",
+        "James Neal"
+      ],
+      "embedUrl": "https://www.youtube-nocookie.com/embed/jfA__-Rpkqs",
+      "watchUrl": "https://www.youtube.com/watch?v=jfA__-Rpkqs",
+      "sourceLabel": "YouTube clip",
+      "sourceDate": "2012-04-15"
+    },
+    {
+      "id": "fight-2012-04-22-giroux-tone-setter",
+      "title": "Giroux throws the opening spark",
+      "date": "2012-04-22",
+      "eraLabel": "Series-clinching hostility",
+      "summary": "Thirty-two seconds into Game 6, Claude Giroux detonated Crosby with a heavy hit and turned the building into static. It was not a staged fight, but it carried the same message: this series would end ugly.",
+      "teamLean": "flyers",
+      "combatants": [
+        "Claude Giroux",
+        "Sidney Crosby",
+        "Kimmo Timonen",
+        "Matt Cooke"
+      ],
+      "embedUrl": "https://www.youtube-nocookie.com/embed/Szl-0O0Dh2w",
+      "watchUrl": "https://www.youtube.com/watch?v=Szl-0O0Dh2w",
+      "sourceLabel": "YouTube clip",
+      "sourceDate": "2012-04-22"
+    }
+  ],
   "oddFacts": [
     {
       "id": "fact-1",

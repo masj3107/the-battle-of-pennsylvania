@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BackToTopButton } from "@/components/BackToTopButton";
+import { FightTapeSection } from "@/components/FightTapeSection";
 import { FooterSources } from "@/components/FooterSources";
 import { GoalieStatsPanel } from "@/components/GoalieStatsPanel";
 import { Hero } from "@/components/Hero";
@@ -107,6 +108,20 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </section>
+
+        <section id="fight-tape">
+          <SectionHeader
+            eyebrow="Fight tape"
+            title="When the rivalry stopped pretending to be civil."
+            description="Three clips that explain why this matchup still carries bruised memory. Not clean hockey. Not quiet hockey. Just Pennsylvania grievance with gloves on the ice."
+            action={
+              <div className="max-w-sm rounded-[1.25rem] border border-amber-300/20 bg-amber-300/10 px-4 py-3 text-xs leading-6 text-amber-50">
+                Embedded clips open inline. Each card also keeps a direct watch link if you want the full-screen version on YouTube.
+              </div>
+            }
+          />
+          <FightTapeSection fights={rivalryData.fightClips} />
         </section>
 
         <section id="odd-facts">
