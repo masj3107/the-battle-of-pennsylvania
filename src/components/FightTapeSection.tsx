@@ -1,3 +1,4 @@
+import { FightTapeVideo } from "@/components/FightTapeVideo";
 import { Reveal } from "@/components/Reveal";
 import { formatDisplayDate } from "@/lib/rivalry-data";
 import { FightClip } from "@/types/rivalry";
@@ -34,14 +35,7 @@ export function FightTapeSection({ fights }: FightTapeSectionProps) {
 
             <div className="border-b border-white/10 bg-black/30 p-3">
               <div className="aspect-video overflow-hidden rounded-[1.25rem] border border-white/10 bg-black">
-                <iframe
-                  src={fight.embedUrl}
-                  title={fight.title}
-                  className="h-full w-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
+                <FightTapeVideo title={fight.title} embedUrl={fight.embedUrl} watchUrl={fight.watchUrl} />
               </div>
             </div>
 
