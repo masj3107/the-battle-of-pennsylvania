@@ -34,6 +34,19 @@ export type LatestMeeting = {
   notableMoment: string;
 };
 
+export type NextGame = {
+  id: string;
+  date: string;
+  startTimeUTC?: string;
+  homeTeamId: TeamId;
+  awayTeamId: TeamId;
+  location: string;
+  gameCenterUrl?: string;
+  gameType: "regular-season" | "playoffs";
+  seriesStatus?: string;
+  hypeNote?: string;
+};
+
 export type RecentMeeting = {
   id: string;
   date: string;
@@ -140,6 +153,7 @@ export type RivalryData = {
   playoffBannerMessage?: string;
   teams: TeamSummary[];
   latestMeeting: LatestMeeting;
+  nextGame?: NextGame;
   recentMeetings: RecentMeeting[];
   activePlayerLeaders: Player[];
   allTimePlayerLeaders: Player[];

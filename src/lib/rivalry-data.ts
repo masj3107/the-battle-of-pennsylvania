@@ -15,6 +15,15 @@ export function formatDisplayDate(value: string) {
   }).format(new Date(value));
 }
 
+export function formatDisplayDateTime(value: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit"
+  }).format(new Date(value));
+}
+
 export function formatTeamShortName(teamId: TeamId) {
   return teamId === "flyers" ? "Philadelphia" : "Pittsburgh";
 }

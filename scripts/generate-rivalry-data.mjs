@@ -504,6 +504,40 @@ function currentSeriesLooksLive(games) {
   });
 }
 
+function getNextScheduledGame(games) {
+  const now = TODAY.getTime();
+
+  return [...games]
+    .filter((game) => {
+      const scheduledAt = new Date(game.startTimeUTC ?? game.gameDate).getTime();
+      return !Number.isNaN(scheduledAt) && scheduledAt >= now && !isFinalGame(game);
+    })
+    .sort((a, b) => new Date(a.startTimeUTC ?? a.gameDate).getTime() - new Date(b.startTimeUTC ?? b.gameDate).getTime())[0];
+}
+
+function buildSeriesStatus(game) {
+  const round = game.seriesStatus?.round;
+  const gameNumberOfSeries = game.seriesStatus?.gameNumberOfSeries;
+  const topSeedWins = game.seriesStatus?.topSeedWins;
+  const bottomSeedWins = game.seriesStatus?.bottomSeedWins;
+  const seriesUrl = game.seriesUrl;
+  const seriesRecord =
+    typeof topSeedWins === "number" && typeof bottomSeedWins === "number" ? `Series ${topSeedWins}-${bottomSeedWins}` : undefined;
+
+  if (typeof round === "number" && typeof gameNumberOfSeries === "number") {
+    return seriesRecord ? `Round ${round}, Game ${gameNumberOfSeries} / ${seriesRecord}` : `Round ${round}, Game ${gameNumberOfSeries}`;
+  }
+
+  if (seriesUrl) {
+    const match = /round-(\d+)\/game-(\d+)/i.exec(seriesUrl);
+    if (match) {
+      return seriesRecord ? `Round ${match[1]}, Game ${match[2]} / ${seriesRecord}` : `Round ${match[1]}, Game ${match[2]}`;
+    }
+  }
+
+  return seriesRecord;
+}
+
 async function buildFromNhl() {
   const mock = buildFromMock();
   const registry = readJson(registryFile);
@@ -541,6 +575,7 @@ async function buildFromNhl() {
 
   const latest = recentMeetings[0];
   const latestGame = officialMeetings[0];
+  const nextScheduledGame = getNextScheduledGame(schedules);
   const rosters = {
     flyers: await fetchRoster("PHI"),
     penguins: await fetchRoster("PIT")
@@ -579,6 +614,23 @@ async function buildFromNhl() {
       topPerformers: latest.topPerformers,
       notableMoment: latest.notableMoment
     },
+    nextGame: nextScheduledGame
+      ? {
+          id: String(nextScheduledGame.id),
+          date: nextScheduledGame.gameDate,
+          startTimeUTC: nextScheduledGame.startTimeUTC,
+          homeTeamId: mapAbbrevToTeamId(nextScheduledGame.homeTeam.abbrev),
+          awayTeamId: mapAbbrevToTeamId(nextScheduledGame.awayTeam.abbrev),
+          location: `${nextScheduledGame.venue.default}, ${nextScheduledGame.homeTeam.placeName.default}`,
+          gameCenterUrl: `https://www.nhl.com${nextScheduledGame.gameCenterLink}`,
+          gameType: nextScheduledGame.gameType === 3 ? "playoffs" : "regular-season",
+          seriesStatus: buildSeriesStatus(nextScheduledGame),
+          hypeNote:
+            nextScheduledGame.gameType === 3
+              ? "Playoff oxygen removed. Every shift now tastes metallic."
+              : "The next collision is already on the board."
+        }
+      : mock.nextGame,
     recentMeetings,
     activePlayerLeaders: hydratePlayerHeadshots(applyOfficialSkaterTotals(rosterEnrichedActive, historicalTotals.skaters)),
     allTimePlayerLeaders: registryEnrichedAllTime,

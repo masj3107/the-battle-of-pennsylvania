@@ -22,6 +22,7 @@ export default function HomePage() {
         <Hero
           lastBloodTeamId={rivalryData.appState.lastBloodTeamId}
           latestMeeting={rivalryData.latestMeeting}
+          nextGame={rivalryData.nextGame}
           rivalryHook={rivalryData.rivalryHook}
           playoffMode={rivalryData.appState.playoffMode}
           playoffBannerMessage={rivalryData.playoffBannerMessage ?? ""}
