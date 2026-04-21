@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AudioToggle } from "@/components/AudioToggle";
 import { LastBloodBadge } from "@/components/LastBloodBadge";
@@ -17,11 +20,26 @@ type HeroProps = {
 };
 
 export function Hero({ lastBloodTeamId, latestMeeting, nextGame, rivalryHook, playoffMode, playoffBannerMessage }: HeroProps) {
+  const [hasMounted, setHasMounted] = useState(false);
   const flyers = teamsById.flyers;
   const penguins = teamsById.penguins;
-  const nextGameIsPlayoff = nextGame?.gameType === "playoffs";
+  const activeNextGame =
+    hasMounted && nextGame
+      ? new Date(nextGame.startTimeUTC ?? nextGame.date).getTime() > Date.now()
+        ? nextGame
+        : undefined
+      : undefined;
+  const nextGameIsPlayoff = activeNextGame?.gameType === "playoffs";
   const playoffVisualMode = playoffMode || nextGameIsPlayoff;
-  const nextGameLabel = nextGame?.startTimeUTC ? formatDisplayDateTime(nextGame.startTimeUTC) : formatDisplayDate(nextGame?.date ?? "");
+  const nextGameLabel = activeNextGame
+    ? activeNextGame.startTimeUTC
+      ? formatDisplayDateTime(activeNextGame.startTimeUTC)
+      : formatDisplayDate(activeNextGame.date)
+    : "";
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   return (
     <section
@@ -43,7 +61,10 @@ export function Hero({ lastBloodTeamId, latestMeeting, nextGame, rivalryHook, pl
       {playoffVisualMode ? <div className="absolute inset-x-[12%] bottom-12 h-32 rounded-full bg-rose-500/10 blur-3xl" /> : null}
       <div className="relative z-10">
         <div className="flex items-start justify-between gap-4">
-          <PlayoffModeBanner active={playoffVisualMode} message={nextGameIsPlayoff ? nextGame?.seriesStatus ?? playoffBannerMessage : playoffBannerMessage} />
+          <PlayoffModeBanner
+            active={playoffVisualMode}
+            message={nextGameIsPlayoff ? activeNextGame?.seriesStatus ?? playoffBannerMessage : playoffBannerMessage}
+          />
           <AudioToggle defaultEnabled={false} />
         </div>
         <div className="mt-16 grid items-end gap-12 xl:grid-cols-[1.1fr_0.9fr]">
@@ -108,28 +129,30 @@ export function Hero({ lastBloodTeamId, latestMeeting, nextGame, rivalryHook, pl
                   </a>
                 ) : null}
               </div>
-              {nextGame ? (
+              {activeNextGame ? (
                 <div className={`mt-5 rounded-[1.5rem] border p-5 ${nextGameIsPlayoff ? "border-rose-300/30 bg-rose-500/10" : "border-amber-200/20 bg-amber-200/10"}`}>
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <p className={`text-xs uppercase tracking-[0.28em] ${nextGameIsPlayoff ? "text-rose-100" : "text-amber-50"}`}>
                       {nextGameIsPlayoff ? "Next playoff strike" : "Next game"}
                     </p>
-                    {nextGame.seriesStatus ? (
+                    {activeNextGame.seriesStatus ? (
                       <span className={`rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.26em] ${nextGameIsPlayoff ? "bg-rose-200/15 text-rose-100" : "bg-black/25 text-slate-200"}`}>
-                        {nextGame.seriesStatus}
+                        {activeNextGame.seriesStatus}
                       </span>
                     ) : null}
                   </div>
                   <h3 className="mt-3 font-display text-3xl text-bone">
-                    {formatTeamShortName(nextGame.awayTeamId)} at {formatTeamShortName(nextGame.homeTeamId)}
+                    {formatTeamShortName(activeNextGame.awayTeamId)} at {formatTeamShortName(activeNextGame.homeTeamId)}
                   </h3>
                   <p className="mt-2 text-sm uppercase tracking-[0.22em] text-slate-200">{nextGameLabel}</p>
                   <p className="mt-3 text-sm leading-7 text-slate-200">
-                    {nextGame.location}. {nextGame.hypeNote ?? (nextGameIsPlayoff ? "The rivalry has crossed into elimination-weather theater." : "The state line is loading the next collision.")}
+                    {activeNextGame.location}.{" "}
+                    {activeNextGame.hypeNote ??
+                      (nextGameIsPlayoff ? "The rivalry has crossed into elimination-weather theater." : "The state line is loading the next collision.")}
                   </p>
-                  {nextGame.gameCenterUrl ? (
+                  {activeNextGame.gameCenterUrl ? (
                     <a
-                      href={nextGame.gameCenterUrl}
+                      href={activeNextGame.gameCenterUrl}
                       target="_blank"
                       rel="noreferrer"
                       className={`mt-5 inline-flex rounded-full border px-4 py-2 text-xs uppercase tracking-[0.26em] transition ${
