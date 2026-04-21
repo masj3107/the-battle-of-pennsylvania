@@ -47,6 +47,8 @@ Generate it manually with:
 npm run data:build
 ```
 
+An automated GitHub Actions workflow also refreshes `src/data/rivalry.generated.json` on a daily schedule and deploys GitHub Pages whenever the generated data changes.
+
 To swap in NHL-backed data later:
 
 1. Replace the mock adapter inside `scripts/generate-rivalry-data.mjs` with an NHL API ingestion step.
