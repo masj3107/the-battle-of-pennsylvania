@@ -37,39 +37,85 @@
     }
   ],
   "latestMeeting": {
-    "date": "2026-04-18",
+    "date": "2026-04-22",
     "winnerTeamId": "flyers",
-    "homeTeamId": "penguins",
-    "awayTeamId": "flyers",
-    "score": "3-2",
+    "homeTeamId": "flyers",
+    "awayTeamId": "penguins",
+    "score": "2-5",
     "overtimeType": "REG",
-    "location": "PPG Paints Arena, Pittsburgh",
-    "gameCenterUrl": "https://www.nhl.com/gamecenter/phi-vs-pit/2026/04/18/2025030141",
+    "location": "Xfinity Mobile Arena, Philadelphia",
+    "gameCenterUrl": "https://www.nhl.com/gamecenter/pit-vs-phi/2026/04/22/2025030143",
     "topPerformers": [
       {
-        "name": "R. Ristolainen",
-        "statLine": "0 G, 2 A"
+        "name": "T. Zegras",
+        "statLine": "1 G, 1 A"
       },
       {
-        "name": "P. Martone",
-        "statLine": "1 G, 0 A"
+        "name": "N. Cates",
+        "statLine": "1 G, 1 A"
       }
     ],
-    "notableMoment": "P. Martone supplied the winner behind D. Vladar."
+    "notableMoment": "N. Seeler supplied the winner behind D. Vladar."
   },
   "nextGame": {
-    "id": "2025030142",
-    "date": "2026-04-20",
-    "startTimeUTC": "2026-04-20T23:00:00Z",
-    "homeTeamId": "penguins",
-    "awayTeamId": "flyers",
-    "location": "PPG Paints Arena, Pittsburgh",
-    "gameCenterUrl": "https://www.nhl.com/gamecenter/phi-vs-pit/2026/04/20/2025030142",
+    "id": "2025030144",
+    "date": "2026-04-25",
+    "startTimeUTC": "2026-04-26T00:00:00Z",
+    "homeTeamId": "flyers",
+    "awayTeamId": "penguins",
+    "location": "Xfinity Mobile Arena, Philadelphia",
+    "gameCenterUrl": "https://www.nhl.com/gamecenter/pit-vs-phi/2026/04/25/2025030144",
     "gameType": "playoffs",
-    "seriesStatus": "Round 1, Game 2 / Series 0-1",
+    "seriesStatus": "Round 1, Game 4 / Series 0-3",
     "hypeNote": "Playoff oxygen removed. Every shift now tastes metallic."
   },
   "recentMeetings": [
+    {
+      "id": "2025030143",
+      "date": "2026-04-22",
+      "homeTeamId": "flyers",
+      "awayTeamId": "penguins",
+      "homeScore": 5,
+      "awayScore": 2,
+      "winnerTeamId": "flyers",
+      "overtimeType": "REG",
+      "location": "Xfinity Mobile Arena, Philadelphia",
+      "gameCenterUrl": "https://www.nhl.com/gamecenter/pit-vs-phi/2026/04/22/2025030143",
+      "topPerformers": [
+        {
+          "name": "T. Zegras",
+          "statLine": "1 G, 1 A"
+        },
+        {
+          "name": "N. Cates",
+          "statLine": "1 G, 1 A"
+        }
+      ],
+      "notableMoment": "N. Seeler supplied the winner behind D. Vladar."
+    },
+    {
+      "id": "2025030142",
+      "date": "2026-04-20",
+      "homeTeamId": "penguins",
+      "awayTeamId": "flyers",
+      "homeScore": 0,
+      "awayScore": 3,
+      "winnerTeamId": "flyers",
+      "overtimeType": "REG",
+      "location": "PPG Paints Arena, Pittsburgh",
+      "gameCenterUrl": "https://www.nhl.com/gamecenter/phi-vs-pit/2026/04/20/2025030142",
+      "topPerformers": [
+        {
+          "name": "G. Hathaway",
+          "statLine": "1 G, 1 A"
+        },
+        {
+          "name": "P. Martone",
+          "statLine": "1 G, 0 A"
+        }
+      ],
+      "notableMoment": "P. Martone supplied the winner behind D. Vladar."
+    },
     {
       "id": "2025030141",
       "date": "2026-04-18",
@@ -138,52 +184,6 @@
         }
       ],
       "notableMoment": "B. Lizotte supplied the winner behind S. Skinner."
-    },
-    {
-      "id": "2025020407",
-      "date": "2025-12-01",
-      "homeTeamId": "flyers",
-      "awayTeamId": "penguins",
-      "homeScore": 1,
-      "awayScore": 5,
-      "winnerTeamId": "penguins",
-      "overtimeType": "REG",
-      "location": "Xfinity Mobile Arena, Philadelphia",
-      "gameCenterUrl": "https://www.nhl.com/gamecenter/pit-vs-phi/2025/12/01/2025020407",
-      "topPerformers": [
-        {
-          "name": "B. Rust",
-          "statLine": "1 G, 2 A"
-        },
-        {
-          "name": "S. Crosby",
-          "statLine": "2 G, 0 A"
-        }
-      ],
-      "notableMoment": "S. Crosby supplied the winner behind T. Jarry."
-    },
-    {
-      "id": "2025020150",
-      "date": "2025-10-28",
-      "homeTeamId": "flyers",
-      "awayTeamId": "penguins",
-      "homeScore": 3,
-      "awayScore": 2,
-      "winnerTeamId": "flyers",
-      "overtimeType": "SO",
-      "location": "Xfinity Mobile Arena, Philadelphia",
-      "gameCenterUrl": "https://www.nhl.com/gamecenter/pit-vs-phi/2025/10/28/2025020150",
-      "topPerformers": [
-        {
-          "name": "B. Brink",
-          "statLine": "1 G, 1 A"
-        },
-        {
-          "name": "T. Konecny",
-          "statLine": "1 G, 0 A"
-        }
-      ],
-      "notableMoment": "B. Brink settled it in SO."
     }
   ],
   "activePlayerLeaders": [
@@ -196,17 +196,17 @@
       "playedForBothTeams": false,
       "position": "C",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8471675.png",
-      "rivalryGames": 93,
-      "goalsVsRival": 73,
+      "rivalryGames": 88,
+      "goalsVsRival": 72,
       "assistsVsRival": 95,
-      "pointsVsRival": 168,
-      "pointsPerGameVsRival": 1.81,
+      "pointsVsRival": 167,
+      "pointsPerGameVsRival": 1.9,
       "gameWinningGoalsVsRival": 9,
-      "hitsVsRival": 84,
-      "penaltyMinutesVsRival": 65,
+      "hitsVsRival": 88,
+      "penaltyMinutesVsRival": 58,
       "otGoalsVsRival": 3,
       "playoffGoalsVsRival": 15,
-      "playoffPointsVsRival": 36,
+      "playoffPointsVsRival": 37,
       "nhlPlayerId": 8471675
     },
     {
@@ -219,16 +219,16 @@
       "position": "C",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8471215.png",
       "rivalryGames": 76,
-      "goalsVsRival": 45,
-      "assistsVsRival": 76,
-      "pointsVsRival": 121,
-      "pointsPerGameVsRival": 1.59,
+      "goalsVsRival": 46,
+      "assistsVsRival": 77,
+      "pointsVsRival": 123,
+      "pointsPerGameVsRival": 1.62,
       "gameWinningGoalsVsRival": 6,
       "hitsVsRival": 39,
       "penaltyMinutesVsRival": 148,
       "otGoalsVsRival": 1,
-      "playoffGoalsVsRival": 14,
-      "playoffPointsVsRival": 29,
+      "playoffGoalsVsRival": 15,
+      "playoffPointsVsRival": 30,
       "nhlPlayerId": 8471215
     },
     {
@@ -240,17 +240,17 @@
       "playedForBothTeams": false,
       "position": "RW",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8478439.png",
-      "rivalryGames": 27,
-      "goalsVsRival": 12,
-      "assistsVsRival": 18,
-      "pointsVsRival": 30,
-      "pointsPerGameVsRival": 1.11,
+      "rivalryGames": 29,
+      "goalsVsRival": 14,
+      "assistsVsRival": 19,
+      "pointsVsRival": 33,
+      "pointsPerGameVsRival": 1.14,
       "gameWinningGoalsVsRival": 1,
-      "hitsVsRival": 56,
-      "penaltyMinutesVsRival": 10,
+      "hitsVsRival": 58,
+      "penaltyMinutesVsRival": 12,
       "otGoalsVsRival": 0,
       "playoffGoalsVsRival": 1,
-      "playoffPointsVsRival": 2,
+      "playoffPointsVsRival": 3,
       "nhlPlayerId": 8478439
     },
     {
@@ -263,16 +263,16 @@
       "position": "RW",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8480015.png",
       "rivalryGames": 12,
-      "goalsVsRival": 5,
-      "assistsVsRival": 3,
-      "pointsVsRival": 8,
-      "pointsPerGameVsRival": 0.67,
+      "goalsVsRival": 6,
+      "assistsVsRival": 4,
+      "pointsVsRival": 10,
+      "pointsPerGameVsRival": 0.83,
       "gameWinningGoalsVsRival": 0,
-      "hitsVsRival": 31,
+      "hitsVsRival": 48,
       "penaltyMinutesVsRival": 0,
       "otGoalsVsRival": 0,
-      "playoffGoalsVsRival": 0,
-      "playoffPointsVsRival": 0,
+      "playoffGoalsVsRival": 1,
+      "playoffPointsVsRival": 2,
       "nhlPlayerId": 8480015
     },
     {
@@ -286,15 +286,15 @@
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8475810.png",
       "rivalryGames": 29,
       "goalsVsRival": 15,
-      "assistsVsRival": 18,
-      "pointsVsRival": 33,
-      "pointsPerGameVsRival": 1.14,
-      "gameWinningGoalsVsRival": 4,
+      "assistsVsRival": 17,
+      "pointsVsRival": 32,
+      "pointsPerGameVsRival": 1.1,
+      "gameWinningGoalsVsRival": 3,
       "hitsVsRival": 48,
-      "penaltyMinutesVsRival": 2,
+      "penaltyMinutesVsRival": 6,
       "otGoalsVsRival": 1,
       "playoffGoalsVsRival": 4,
-      "playoffPointsVsRival": 4,
+      "playoffPointsVsRival": 5,
       "nhlPlayerId": 8475810
     },
     {
@@ -306,14 +306,14 @@
       "playedForBothTeams": false,
       "position": "C",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8480028.png",
-      "rivalryGames": 9,
+      "rivalryGames": 5,
       "goalsVsRival": 1,
       "assistsVsRival": 3,
       "pointsVsRival": 4,
-      "pointsPerGameVsRival": 0.44,
+      "pointsPerGameVsRival": 0.8,
       "gameWinningGoalsVsRival": 0,
       "hitsVsRival": 12,
-      "penaltyMinutesVsRival": 4,
+      "penaltyMinutesVsRival": 2,
       "otGoalsVsRival": 0,
       "playoffGoalsVsRival": 0,
       "playoffPointsVsRival": 0,
@@ -328,17 +328,17 @@
       "playedForBothTeams": false,
       "position": "RW",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8476483.png",
-      "rivalryGames": 12,
+      "rivalryGames": 13,
       "goalsVsRival": 7,
-      "assistsVsRival": 7,
-      "pointsVsRival": 14,
-      "pointsPerGameVsRival": 1.17,
+      "assistsVsRival": 8,
+      "pointsVsRival": 15,
+      "pointsPerGameVsRival": 1.15,
       "gameWinningGoalsVsRival": 0,
-      "hitsVsRival": 27,
+      "hitsVsRival": 28,
       "penaltyMinutesVsRival": 2,
       "otGoalsVsRival": 0,
       "playoffGoalsVsRival": 0,
-      "playoffPointsVsRival": 1,
+      "playoffPointsVsRival": 2,
       "nhlPlayerId": 8476483
     },
     {
@@ -350,14 +350,14 @@
       "playedForBothTeams": true,
       "position": "RW",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8475763.png",
-      "rivalryGames": 12,
-      "goalsVsRival": 4,
-      "assistsVsRival": 4,
-      "pointsVsRival": 8,
-      "pointsPerGameVsRival": 0.67,
+      "rivalryGames": 13,
+      "goalsVsRival": 5,
+      "assistsVsRival": 5,
+      "pointsVsRival": 10,
+      "pointsPerGameVsRival": 0.77,
       "gameWinningGoalsVsRival": 0,
-      "hitsVsRival": 32,
-      "penaltyMinutesVsRival": 10,
+      "hitsVsRival": 30,
+      "penaltyMinutesVsRival": 0,
       "otGoalsVsRival": 0,
       "playoffGoalsVsRival": 0,
       "playoffPointsVsRival": 0,
@@ -394,11 +394,11 @@
       "playedForBothTeams": false,
       "position": "LW",
       "headshot": "https://assets.nhle.com/mugs/nhl/latest/8480797.png",
-      "rivalryGames": 12,
+      "rivalryGames": 14,
       "goalsVsRival": 4,
       "assistsVsRival": 10,
       "pointsVsRival": 14,
-      "pointsPerGameVsRival": 1.17,
+      "pointsPerGameVsRival": 1,
       "gameWinningGoalsVsRival": 0,
       "hitsVsRival": 23,
       "penaltyMinutesVsRival": 4,

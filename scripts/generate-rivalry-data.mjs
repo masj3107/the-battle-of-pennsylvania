@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import { execFileSync } from "node:child_process";
 
 const args = process.argv.slice(2);
 const sourceArg = args.find((arg) => arg.startsWith("--source="));
@@ -48,31 +49,49 @@ function getSeasonForDate(date) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "the-battle-of-pennsylvania-mvp"
-    }
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} for ${url}`);
-  }
-
-  return response.json();
+  return JSON.parse(await fetchWithFallback(url));
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "the-battle-of-pennsylvania-mvp"
+  return fetchWithFallback(url);
+}
+
+async function fetchWithFallback(url) {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "the-battle-of-pennsylvania-mvp"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} for ${url}`);
     }
-  });
 
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} for ${url}`);
+    return await response.text();
+  } catch (error) {
+    const shouldUseWindowsFallback =
+      process.platform === "win32" &&
+      error instanceof TypeError &&
+      /fetch failed|certificate|issuer/i.test(error.message);
+
+    if (!shouldUseWindowsFallback) {
+      throw error;
+    }
+
+    const escapedUrl = url.replace(/'/g, "''");
+    const powershellScript = `
+      $ProgressPreference = 'SilentlyContinue'
+      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+      $response = Invoke-WebRequest -UseBasicParsing -Headers @{ 'User-Agent' = 'the-battle-of-pennsylvania-mvp' } -Uri '${escapedUrl}'
+      [Console]::Out.Write($response.Content)
+    `;
+
+    return execFileSync("powershell.exe", ["-NoProfile", "-Command", powershellScript], {
+      encoding: "utf8",
+      maxBuffer: 1024 * 1024 * 20
+    });
   }
-
-  return response.text();
 }
 
 function mapAbbrevToTeamId(abbrev) {
