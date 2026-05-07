@@ -630,7 +630,7 @@ async function buildFromNhl() {
               ? "Playoff oxygen removed. Every shift now tastes metallic."
               : "The next collision is already on the board."
         }
-      : mock.nextGame,
+      : undefined,
     recentMeetings,
     activePlayerLeaders: hydratePlayerHeadshots(applyOfficialSkaterTotals(rosterEnrichedActive, historicalTotals.skaters)),
     allTimePlayerLeaders: registryEnrichedAllTime,

@@ -57,18 +57,6 @@
     ],
     "notableMoment": "C. York settled it in OT."
   },
-  "nextGame": {
-    "id": "gm-2025-04-20",
-    "date": "2025-04-20",
-    "startTimeUTC": "2025-04-20T23:30:00Z",
-    "homeTeamId": "penguins",
-    "awayTeamId": "flyers",
-    "location": "PPG Paints Arena, Pittsburgh",
-    "gameCenterUrl": "https://www.nhl.com/gamecenter/phi-vs-pit/2025/04/20/2025030111",
-    "gameType": "playoffs",
-    "seriesStatus": "Round 1, Game 1",
-    "hypeNote": "Fresh postseason damage, same state line."
-  },
   "recentMeetings": [
     {
       "id": "2025030146",
