@@ -14,6 +14,7 @@ const teamsDir = path.join(root, "public", "images", "teams");
 const TODAY = new Date();
 const TEAM_IDS = ["PHI", "PIT"];
 const OFFICIAL_HISTORY_START_YEAR = 2005;
+let shouldWriteOutput = true;
 const NHL_TEAM_META = {
   flyers: {
     abbrev: "PHI",
@@ -39,6 +40,15 @@ function buildFromMock() {
   const data = readJson(sourceFile);
 
   return data;
+}
+
+function buildFromExistingGenerated() {
+  if (!fs.existsSync(outputFile)) {
+    return buildFromMock();
+  }
+
+  shouldWriteOutput = false;
+  return readJson(outputFile);
 }
 
 function getSeasonForDate(date) {
@@ -630,7 +640,7 @@ async function buildFromNhl() {
               ? "Playoff oxygen removed. Every shift now tastes metallic."
               : "The next collision is already on the board."
         }
-      : undefined,
+      : mock.nextGame,
     recentMeetings,
     activePlayerLeaders: hydratePlayerHeadshots(applyOfficialSkaterTotals(rosterEnrichedActive, historicalTotals.skaters)),
     allTimePlayerLeaders: registryEnrichedAllTime,
@@ -656,8 +666,8 @@ async function buildData() {
     try {
       return await buildFromNhl();
     } catch (error) {
-      console.warn(`Falling back to mock source: ${error.message}`);
-      return buildFromMock();
+      console.warn(`Keeping existing generated data after NHL source failure: ${error.message}`);
+      return buildFromExistingGenerated();
     }
   }
 
@@ -665,5 +675,7 @@ async function buildData() {
 }
 
 const generated = await buildData();
-writeJson(outputFile, generated);
+if (shouldWriteOutput) {
+  writeJson(outputFile, generated);
+}
 console.log(`Generated rivalry data from ${source} source.`);
